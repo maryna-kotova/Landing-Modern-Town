@@ -1,0 +1,423 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html, body{
+    scroll-behavior: smooth;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    height: 65vw;
+    background-image: url(../images/home-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+header p{
+    font-size: 1.3em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #fcb120;   
+}
+header h1{
+    margin: 2vw 0 4vw 0;
+    font-size: 4.7em;
+    color: #343434;
+}
+header>div{
+    display: flex; 
+    justify-content: center;   
+}
+header a{
+    display: block;
+    width: 14vw;
+    height: 7vh;
+    font-size: 0.9em;
+    line-height: 7vh;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+}
+header>div>a:first-child{  
+    margin-right: 2vw;  
+    background-color: #ffa401;
+    border: 1px solid #ffa401;    
+}
+header>div>a+a{
+    background-color: black;
+    border: 1px solid black; 
+}
+main>section{
+    display: grid;
+    width: 100%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+main>section img:first-child{
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+main>section img:first-child+article{
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+main>section article+img{
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+main>section article:last-child{
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+main>section img{
+    width: 100%;
+}
+main>section article{
+    padding: 3% 6% 0;
+}
+main>section h2{
+    margin: 1.5vw 0 2vw 0;
+    letter-spacing: 0.1em;
+    color: #fab43a;
+}
+main>section p{
+    line-height: 1.8em;
+    letter-spacing: 0.07em;
+}
+main>section span{
+    color: #5871a8;
+}
+main .block_slider{
+    margin: 5vw 0;
+}
+main .block_slider input{ 
+	display: none;
+}
+main .block_slider img{
+    width: 15vw;
+    margin: 2vw 0;
+    border-radius: 50%;
+}
+main .block_slider h2{   
+    margin-bottom: 3vw; 
+    font-size: 2vw;    
+    color: #3b3b3b;
+}
+main .block_slider p{    
+    margin-bottom: 7vw;
+    font-size: 1.5em;    
+    line-height: 1.7em;
+    color: #808080;
+}
+main #desktop:checked ~ #slider{ 
+	max-width: 960px; 
+}
+main #slider { 
+    margin: 0 auto;
+    position: relative;
+	text-align: center;   
+}
+main #slides article{ 
+	width: 33.33%; 
+	float: left;
+}
+main #slides .image{ 
+	width: 300%; 
+    line-height: 0;
+    transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+main #overflow{ 
+	width: 100%;
+	overflow: hidden;
+}
+main #switch1:checked ~ #slides .image{
+	margin-left: 0;
+}
+main #switch2:checked ~ #slides .image{
+	margin-left: -100%;
+}
+main #switch3:checked ~ #slides .image{
+	margin-left: -200%;
+}
+main #active label{ 
+    border-radius: 10px; 
+	display: inline-block; 
+	width: 15px;
+    height: 15px;
+    margin: -5vw  0.5% 0;
+	background: #8e8e8e;
+}
+main #active{
+	margin: 2% 0 0;
+	text-align: center;
+}
+main #active label:hover{ 
+	background: #212121;
+	border-color: #212121 !important; 
+}
+#switch1:checked ~ #active label:nth-child(1),
+#switch2:checked ~ #active label:nth-child(2),
+#switch3:checked ~ #active label:nth-child(3){
+	background: #212121;
+	border-color: #212121 !important;
+}
+main .number{
+    display: flex;
+    justify-content: space-around;
+    background-image: url(../images/counter-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+main .number>div{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;  
+    margin: 10vw 0;  
+}
+main .number h3{
+    color: #fda503;
+}
+main .number p{
+    color: white;
+}
+main .blog{
+    display: flex;
+    flex-flow: column nowrap;    
+    width: 100%;  
+    padding-bottom: 2vw;    
+}
+main .blog>article{   
+    margin: 5vw 0;
+    text-align: center;    
+} 
+main .blog>article>h3{
+    margin-bottom: 3vh; 
+    font-size: 2.4em;   
+} 
+main .blog>article>p{
+    font-size: 1.4em;
+    font-weight: bold;
+}
+main .blog>div{
+    display: flex;
+    justify-content: space-around;
+}
+main .blog>div>div{
+    display: flex;   
+    flex-flow: column nowrap;
+    align-items: center;    
+    width: 30%;    
+}
+main .blog div>a>*{
+    padding-bottom: 1.3vw;
+}
+main .blog div>a{
+    width: 100%;
+    padding: 2vw;
+    margin-bottom: 3vw;
+    text-decoration: none;
+    border: 1px solid lightgray;
+    color: black;
+}
+main .blog div>a>img{
+    width: 100%;
+}
+main .blog div>a>h4{
+    font-size: 1.4em;
+    letter-spacing: 0.09em;
+}
+main .blog div>a>h4+p{
+    font-size: 1em;
+    color: #8d8d8d;
+}
+main .blog div>a>p+p{
+    font-size: 1.1em;
+    letter-spacing: 0.09em;
+    line-height: 2em;
+    color: #8d8d8d;
+}
+footer>form{
+    display: flex;
+    justify-content: space-around;
+    height: 57vw;
+    padding: 8.5vw 2vw 9.5vw 2vw;
+    background-image: url(../images/contact-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+footer>form div:first-child{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+footer>form [type="text"],
+footer>form [type="email"],
+footer>form [type="text"],
+footer>form textarea{
+    margin-bottom: 1.9vw;
+    padding-left: 1vw;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+}
+footer>form [type="text"],
+footer>form [type="email"],
+footer>form [type="text"]{
+    height: 7vh;
+}
+footer>form ::placeholder{
+    font-weight: bold;
+    color: white;
+}
+footer>form textarea{
+    padding-top: 1vw;
+    font-weight: bold;
+}
+footer>form [type="submit"]{
+    width: 15vw;
+    height: 8vh;
+    font-size: 1.2vw;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+footer>form div+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: 31vw;
+    margin-left: 3vw;
+    padding: 5vw;   
+    line-height: 3vw; 
+    background-color: rgba(255, 255, 255, 0.719);
+}
+footer>form>div+div h3{
+    font-size: 2.1vw;
+    color: #31322e;
+}
+footer>form article{
+    display: flex;
+    flex-direction: column;
+}
+footer>form>div+div h4{
+    font-size: 1.5vw;
+    color: #363731;
+}
+footer>form>div+div p{
+    font-size: 1.3vw;
+    color: #7d7f79;
+}
+.tel{
+    white-space: pre;
+}
+footer>section{
+    display: flex;
+    justify-content: space-between;    
+    width: 100%;    
+    /* height: 33vw; */
+    padding: 7vw 5vw;
+}
+footer>section>div:first-child,
+footer>section .links>div{
+    display: flex;
+    flex-direction: column;
+}
+footer>section>div:first-child{
+    display: flex;
+    flex-direction: column;    
+    width: 50%;
+    padding-right: 5vw;
+}
+footer>section h3{
+    margin-bottom: 2.5vw;
+}
+footer>section>div h3{       
+    font-size: 2.2em;
+    color: #303030;
+}
+footer>section>div>p{ 
+    margin-bottom: 2.5vw;   
+    font-size: 1.2em;
+    line-height: 2.2em; 
+    letter-spacing: 0.06em;   
+    color: #7c7c7c;
+}
+footer>section .links{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+footer>section .links>div>a{
+    margin-bottom: 1em;
+    text-decoration: none;
+    color: #7c7c7c;
+}
+footer>section .links>div>div>a>img{
+    width: 3vw;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 992px){
+    header a{
+        font-size: 1.8vw;
+    }
+    main>section{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    main .blog>div{
+        flex-direction: column;
+    }
+    main .blog>div>div{        
+        flex-flow: row nowrap;  
+        justify-content: space-around; 
+        align-items: flex-start; 
+        width: 100%;
+    }  
+    main .blog div>a{
+        width: 45%;
+    }
+    footer>form div:first-child{
+        width: 70%;
+    }
+    footer>form div+div{
+        justify-content: space-around;
+        width: 30%;
+        height: 35vw;
+        padding: 0 5vw;
+    }
+    .tel{
+        display: flex;
+        flex-direction: column;
+        white-space: normal;
+    }
+    footer>section{
+        display: flex;
+        flex-direction: column;      
+        /* height: 70vw;         */
+    }
+    footer>section>div:first-child{
+        display: flex;
+        flex-direction: column;    
+        width: 100%;
+    }   
+    footer>section .links{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 576){
+
+}
+
+
+
